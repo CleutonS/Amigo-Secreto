@@ -2,7 +2,7 @@
 // Array para armazenar os nomes
 let amigos = [];
 
-// Função para adicionar um nome à lista
+// Função para adicionar um nome à lista 
 function adicionarAmigo() {
     const input = document.getElementById("amigo");
     const nome = input.value.trim();
@@ -35,34 +35,6 @@ function atualizarLista() {
         lista.appendChild(li);
     });
 }
-
-// Função para sortear um amigo secreto
-/*function sortearAmigo() {
-    if (amigos.length < 2) {
-        alert("Você precisa adicionar pelo menos dois nomes para realizar o sorteio.");
-        return;
-    }
-
-    const resultado = document.getElementById("resultado");
-    resultado.innerHTML = "";
-
-    // Copia o array para sortear
-    const copiaAmigos = [...amigos];
-
-    // Embaralha a lista de amigos
-    for (let i = copiaAmigos.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [copiaAmigos[i], copiaAmigos[j]] = [copiaAmigos[j], copiaAmigos[i]];
-    }
-
-    // Mostra os pares do sorteio
-    copiaAmigos.forEach((amigo, index) => {
-        const proximo = copiaAmigos[(index + 1) % copiaAmigos.length];
-        const li = document.createElement("li");
-        li.textContent = `${amigo} tirou ${proximo}`;
-        resultado.appendChild(li);
-    });
-}*/
 
 // Função para sortear apenas um nome
 function sortearAmigo() {
